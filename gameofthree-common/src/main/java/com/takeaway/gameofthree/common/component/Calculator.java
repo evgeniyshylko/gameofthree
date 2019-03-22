@@ -11,7 +11,7 @@ public class Calculator {
 	
 	
 	public long getNext(Long current) {
-		return Math.round(((double) current)/3); //
+		return Math.round(((double) current)/3);
 	}
 	
 	public int generateGameId() {
