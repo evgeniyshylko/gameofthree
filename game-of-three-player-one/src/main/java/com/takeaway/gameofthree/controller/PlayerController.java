@@ -12,7 +12,7 @@ import com.takeaway.gameofthree.common.dto.GameMessage;
 import com.takeaway.gameofthree.component.PlayerMessageHandler;
 
 @RestController
-@RequestMapping("/gameofthree")
+@RequestMapping("${rootUrl}")
 public class PlayerController {
 
 	@Autowired
