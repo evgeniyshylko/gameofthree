@@ -43,6 +43,20 @@ public class PlayerControllerTest {
 			e.printStackTrace();
 		}
 		assertTrue(message.getNumber() == 33);
+		assertTrue(message.isWinner() == false);
+	}
+	
+	@Test
+	public void testCorrectPlayerWins() {
+		GameMessage message = new GameMessage();
+		message.setGameId(4);
+		message.setNumber((long) 4);
+		try {
+			handler.receiveMessage(message);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		assertTrue(message.isWinner() == true);
 	}
 
 }
