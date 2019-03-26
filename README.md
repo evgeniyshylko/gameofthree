@@ -37,8 +37,8 @@ Each player's project is totally independant from others and can be configured b
 1. Start logger by running mvn spring-boot:run
 
 #Start game:
-To start game with PlayerOne use url: http://localhost:8081/gameofthree/1
-To start game with PlayerOne use url: http://localhost:8082/gameofthree/2
+ - To start game with PlayerOne use url: http://localhost:8081/gameofthree/1
+ - To start game with PlayerOne use url: http://localhost:8082/gameofthree/2
 
 #Output:
 Each player has own Console log to display steps.
