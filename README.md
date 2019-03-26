@@ -11,19 +11,19 @@ Players exchnage with jms messages via Apache ActiveMQ broker.
 Each player's project is totally independant from others and can be configured by application.properties:
 
 #Example Player One:
-	- playerId=PlayerOne
-	- nextPlayer=PlayerTwo
-	- rootUrl=/gameofthree
-	- playerUrl=/1
-	- gameLog=GameLog
+- playerId=PlayerOne
+- nextPlayer=PlayerTwo
+- rootUrl=/gameofthree
+- playerUrl=/1
+- gameLog=GameLog
 	
 #Example Player Two:
-	- server.port=8082
-	- playerId=PlayerTwo
-	- nextPlayer=PlayerOne
-	- rootUrl=/gameofthree
-	- playerUrl=/2
-	- gameLog=GameLog
+- server.port=8082
+- playerId=PlayerTwo
+- nextPlayer=PlayerOne
+- rootUrl=/gameofthree
+- playerUrl=/2
+- gameLog=GameLog
 	
 #Build order:
 1. Build in maven gameofthree-common, by running mvn install from project classpath
