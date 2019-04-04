@@ -11,8 +11,9 @@
 	</parent>
 
 	<properties>
-		<start-class>com.takeaway.gameofthree.playertwo.App</start-class>
-		<java.version>1.8</java.version>
+		<start-class>com.takeaway.gameofthree.PlayerApp</start-class>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
 	<dependencies>
