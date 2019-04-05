@@ -19,9 +19,13 @@ public class LoggsHandler {
 	
 	@JmsListener(destination = "${queueName}", containerFactory = "myFactory")
 	public void receiveMessage(GameMessage message) throws InterruptedException {
+		if(message.isWinner()) {
+			LOGGER.info(message.getPlayerId() + " WIN!!!");
+		}
+		else {
 		LOGGER.info("GAME ID: " + message.getGameId() + " :: Number = " + message.getNumber()
-		+ " recieved by "  + message.getPlayerId() 
-		+ " .Player wins = " + message.isWinner());
+		+ " recieved by "  + message.getPlayerId());
+		}
 		
 		
 	}
