@@ -26,8 +26,9 @@ Each player's project is totally independant from others and can be configured b
 - gameLog=GameLog
 
 # Docker
-## Build
 go to repo folder: cd gameofthree
+
+## Build
 	sudo docker-compose build --no-cach
 ## Run
 	sudo docker-compose up
