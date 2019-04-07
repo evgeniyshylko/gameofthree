@@ -6,11 +6,9 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
 import org.springframework.jms.core.JmsTemplate;
-import static org.mockito.Mockito.verify; 
 
 import com.takeaway.gameofthree.common.component.Calculator;
 import com.takeaway.gameofthree.common.dto.GameMessage;

@@ -1,0 +1,64 @@
+version: '3.2'
+
+services:
+  activemq:
+    container_name: activemq
+    image: webcenter/activemq:latest
+    ports:
+      - 61616:61616
+    networks:
+      - gameofthree
+  common:
+    container_name: common
+    build: 
+      context: ./gameofthree-common
+    volumes:
+      - m2-repo:/root/.m2
+    networks: 
+      - gameofthree
+  logger:
+    container_name: logger
+    build: 
+      context: ./logger
+    volumes: 
+      - m2-repo:/root/.m2
+    depends_on: 
+      - common
+    ports:
+      - 8083:8083
+    
+    networks: 
+      - gameofthree
+
+  playerone:
+    container_name: playerone
+    build: 
+      context: ./game-of-three-player-one
+    volumes: 
+      - m2-repo:/root/.m2
+    depends_on: 
+      - common
+    ports:
+      - 8081:8081
+    
+    networks: 
+      - gameofthree
+
+  playertwo:
+    container_name: playertwo
+    build: 
+      context: ./game-of-three-player-two
+    volumes: 
+      - m2-repo:/root/.m2
+    depends_on: 
+      - common
+    ports:
+      - 8082:8082
+    
+    networks: 
+      - gameofthree    
+
+volumes:
+  m2-repo:
+networks:
+  gameofthree:

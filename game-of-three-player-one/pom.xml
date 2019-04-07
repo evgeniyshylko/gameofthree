@@ -1,15 +1,15 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.takeaway.gameofthree</groupId>
-	<artifactId>game-of-three-player-one</artifactId>
+	<artifactId>game-of-three-player</artifactId>
 	<version>0.0.1</version>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.0.5.RELEASE</version>
+		<version>2.1.4.RELEASE</version>
 	</parent>
+
 	<properties>
 		<start-class>com.takeaway.gameofthree.PlayerApp</start-class>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -17,6 +17,7 @@
 	</properties>
 
 	<dependencies>
+
 		<dependency>
 			<groupId>com.takeaway.gameofthree</groupId>
 			<artifactId>gameofthree-common</artifactId>
@@ -42,26 +43,19 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<dependency>
+			<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>com.mockrunner</groupId>
-			<artifactId>mockrunner-jms</artifactId>
-			<version>1.0.5</version>
-		</dependency>
-
+		
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>6.8</version>
 			<scope>test</scope>
 		</dependency>
-
-
 	</dependencies>
 
 	<build>
@@ -72,8 +66,6 @@
 			</plugin>
 		</plugins>
 	</build>
-
-
 
 
 </project>
