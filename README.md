@@ -26,16 +26,19 @@ Each player's project is totally independant from others and can be configured b
 - gameLog=GameLog
 
 # Docker
-go to repo folder: cd gameofthree
-
-## Build
-	sudo docker-compose build --no-cach
-## Run
+	From repo folder: 
+	cd gameofthree
+### Build
+	sudo docker-compose build
+### Run
 	sudo docker-compose up
-
+### Output
+	sudo docker logs playerone
+	sudo docker logs playertwo
+	sudo docker logs logger
 
 # Maven 
-## Change application.properties (by default values set to run app in docker container)
+### Change application.properties (by default values set to run app in docker container)
 	cd gameofthree/game-of-three-player-one/src/main/resources
 	replace 
 		spring.activemq.broker-url=tcp://activemq:61616?jms.redeliveryPolicy.maximumRedeliveries=1
@@ -54,24 +57,26 @@ go to repo folder: cd gameofthree
 	with
 		pring.activemq.broker-url=tcp://localhost:61616?jms.redeliveryPolicy.maximumRedeliveries=1
 
-## Build order in Maven:
+### Build order in Maven:
 1. Build in maven gameofthree-common, by running mvn install from project classpath
 2. Build in Maven logger, by running mvn install from project classpath
 2. Build in Maven game-of-three-player-one, by running mvn install from project classpath
 4. Build in Maven game-of-three-player-two, by running mvn install from project classpath
 	
-## Run :
+### Run :
 1. Start game-of-three-player-one by running mvn spring-boot:run
 1. Start game-of-three-player-teo by running mvn spring-boot:run
 1. Start logger by running mvn spring-boot:run
 
-# Start game:
+### Output:
+Each player has own Console log to display steps.
+To see all players steps in one combilned output, please see console of logger project.
+
+
+# Play game:
  - To start game with PlayerOne use url: http://localhost:8081/gameofthree/1
  - To start game with PlayerOne use url: http://localhost:8082/gameofthree/2
 
-# Output:
-Each player has own Console log to display steps.
-To see all players steps in one combilned output, please see console of logger project.
 
 # Supported scenatiose:
 1. All players and logger are available.
