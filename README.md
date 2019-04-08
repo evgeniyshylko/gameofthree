@@ -37,7 +37,9 @@ Each player's project is totally independant from others and can be configured b
 	sudo docker logs playertwo
 	sudo docker logs logger
 
-# Maven 
+# Maven
+### Requeried software
+	Apache ActiveMQ
 ### Change application.properties (by default values set to run app in docker container)
 	cd gameofthree/game-of-three-player-one/src/main/resources
 	replace 
